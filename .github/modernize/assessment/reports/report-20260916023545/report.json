@@ -34,9 +34,9 @@
   },
   "summary": {
     "totalProjects": 1,
-    "totalIssues": 4,
-    "totalIncidents": 7,
-    "totalEffort": 40,
+    "totalIssues": 6,
+    "totalIncidents": 6,
+    "totalEffort": 29,
     "charts": {
       "severity": {
         "mandatory": 1,
@@ -55,8 +55,8 @@
   "projects": [
     {
       "path": ".",
-      "issues": 4,
-      "storyPoints": 40,
+      "issues": 6,
+      "storyPoints": 29,
       "properties": {
         "appName": "supplychain-worker",
         "jdkVersion": "8",
@@ -184,30 +184,6 @@
           "locationKind": "File",
           "line": 40,
           "column": 0,
-          "targets": {
-            "azure-aks": {
-              "effort": 5,
-              "severity": "optional"
-            },
-            "azure-appservice": {
-              "effort": 5,
-              "severity": "optional"
-            },
-            "azure-container-apps": {
-              "effort": 5,
-              "severity": "optional"
-            }
-          },
-          "labels": [
-            "type=violation",
-            "ruleset=azure/springboot"
-          ]
-        },
-        {
-          "ruleId": "azure-message-queue-amqp-02000",
-          "incidentId": "3eae225f-a8ed-446e-81b2-9f5e35d78a78",
-          "location": "",
-          "locationKind": "",
           "targets": {
             "azure-aks": {
               "effort": 5,

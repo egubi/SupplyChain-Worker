@@ -76,7 +76,7 @@ h1 { font-weight: 600; font-size: 20px; color: var(--text-primary); margin-botto
 .multi-select-dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 100%; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100; margin-top: 2px; }
 .multi-select.open .multi-select-dropdown { display: block; }
 .multi-select-option { display: flex; align-items: center; gap: 6px; padding: 5px 10px; cursor: pointer; font-size: 13px; white-space: nowrap; }
-.multi-select-option:hover { background: var(--bg-secondary); }
+.multi-select-option:hover { background: var(--bg-card); }
 .multi-select-option input[type=checkbox] { margin: 0; cursor: pointer; }
 .clear-filters { font-size: 12px; color: var(--link-color); cursor: pointer; margin-left: 4px; }
 
@@ -136,7 +136,7 @@ h1 { font-weight: 600; font-size: 20px; color: var(--text-primary); margin-botto
 .fact-content h1 { font-size: 22px; font-weight: 700; margin: 0 0 6px 0; color: var(--text-primary); letter-spacing: -0.01em; }
 .fact-content h1 + p { margin-top: 6px; color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
 .fact-content h2 { font-size: 17px; font-weight: 700; margin: 36px 0 12px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border-color); color: var(--text-primary); letter-spacing: -0.01em; }
-.fact-content h3 { font-size: 14px; font-weight: 700; margin: 24px 0 8px 0; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.04em; font-size: 12px; color: var(--text-secondary); }
+.fact-content h3 { font-size: 12px; font-weight: 700; margin: 24px 0 8px 0; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
 .fact-content p { margin: 10px 0; color: var(--text-primary); }
 .fact-content ul, .fact-content ol { margin: 10px 0 10px 22px; }
 .fact-content li { margin: 5px 0; }
@@ -326,8 +326,8 @@ if (document.readyState === 'loading') {
     <colgroup><col class="col-issue"/><col class="col-criticality"/><col class="col-storypoint"/></colgroup>
     <thead><tr><th>Issue Category</th><th>Criticality</th><th>Story Point</th></tr></thead>
     <tbody>
-    <tr class="issue-row" data-criticality="mandatory" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;mandatory&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;mandatory&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;mandatory&quot;}}' data-default-effort="3" data-default-severity="mandatory" data-rule="cra-hardcoded-credential-default-pwd-04000" onclick="toggleRow('row-cloudreadiness-0', this)" style="cursor:pointer;">
-      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-cloudreadiness-0">&#x276F;</button> CRA: Default or well-known password detected</div></td>
+    <tr class="issue-row" data-criticality="mandatory" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;mandatory&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;mandatory&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;mandatory&quot;}}' data-default-effort="3" data-default-severity="mandatory" data-rule="cra-hardcoded-credential-default-pwd-04000">
+      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-cloudreadiness-0" aria-expanded="false" aria-controls="row-cloudreadiness-0" onclick="toggleRow('row-cloudreadiness-0', this)">&#x276F;</button> CRA: Default or well-known password detected</div></td>
       <td class="crit-cell"><span class="crit-label"><span class="crit-square crit-square-mandatory"></span>Mandatory</span></td>
       <td class="sp-cell">3</td>
     </tr>
@@ -347,8 +347,8 @@ if (document.readyState === 'loading') {
         </div>
       </td>
     </tr>
-    <tr class="issue-row" data-criticality="potential" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;potential&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;potential&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;potential&quot;}}' data-default-effort="3" data-default-severity="potential" data-rule="azure-password-01000" onclick="toggleRow('row-cloudreadiness-1', this)" style="cursor:pointer;">
-      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-cloudreadiness-1">&#x276F;</button> Password found in configuration file</div></td>
+    <tr class="issue-row" data-criticality="potential" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;potential&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;potential&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:3,&quot;severity&quot;:&quot;potential&quot;}}' data-default-effort="3" data-default-severity="potential" data-rule="azure-password-01000">
+      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-cloudreadiness-1" aria-expanded="false" aria-controls="row-cloudreadiness-1" onclick="toggleRow('row-cloudreadiness-1', this)">&#x276F;</button> Password found in configuration file</div></td>
       <td class="crit-cell"><span class="crit-label"><span class="crit-square crit-square-potential"></span>Potential</span></td>
       <td class="sp-cell">3</td>
     </tr>
@@ -368,8 +368,8 @@ if (document.readyState === 'loading') {
         </div>
       </td>
     </tr>
-    <tr class="issue-row" data-criticality="optional" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:5,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:5,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:5,&quot;severity&quot;:&quot;optional&quot;}}' data-default-effort="5" data-default-severity="optional" data-rule="azure-message-queue-amqp-02000" onclick="toggleRow('row-cloudreadiness-2', this)" style="cursor:pointer;">
-      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-cloudreadiness-2">&#x276F;</button> Spring AMQP dependency found</div></td>
+    <tr class="issue-row" data-criticality="optional" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:5,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:5,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:5,&quot;severity&quot;:&quot;optional&quot;}}' data-default-effort="5" data-default-severity="optional" data-rule="azure-message-queue-amqp-02000">
+      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-cloudreadiness-2" aria-expanded="false" aria-controls="row-cloudreadiness-2" onclick="toggleRow('row-cloudreadiness-2', this)">&#x276F;</button> Spring AMQP dependency found</div></td>
       <td class="crit-cell"><span class="crit-label"><span class="crit-square crit-square-optional"></span>Optional</span></td>
       <td class="sp-cell">5</td>
     </tr>
@@ -398,8 +398,8 @@ if (document.readyState === 'loading') {
     <colgroup><col class="col-issue"/><col class="col-criticality"/><col class="col-storypoint"/></colgroup>
     <thead><tr><th>Issue Category</th><th>Criticality</th><th>Story Point</th></tr></thead>
     <tbody>
-    <tr class="issue-row" data-criticality="optional" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:8,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:8,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:8,&quot;severity&quot;:&quot;optional&quot;}}' data-default-effort="8" data-default-severity="optional" data-rule="azure-java-version-02000" onclick="toggleRow('row-javaupgrade-0', this)" style="cursor:pointer;">
-      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-javaupgrade-0">&#x276F;</button> Java Version is not the latest LTS</div></td>
+    <tr class="issue-row" data-criticality="optional" data-targets='{&quot;azure-aks&quot;:{&quot;effort&quot;:8,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-appservice&quot;:{&quot;effort&quot;:8,&quot;severity&quot;:&quot;optional&quot;},&quot;azure-container-apps&quot;:{&quot;effort&quot;:8,&quot;severity&quot;:&quot;optional&quot;}}' data-default-effort="8" data-default-severity="optional" data-rule="azure-java-version-02000">
+      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-javaupgrade-0" aria-expanded="false" aria-controls="row-javaupgrade-0" onclick="toggleRow('row-javaupgrade-0', this)">&#x276F;</button> Java Version is not the latest LTS</div></td>
       <td class="crit-cell"><span class="crit-label"><span class="crit-square crit-square-optional"></span>Optional</span></td>
       <td class="sp-cell">8</td>
     </tr>
@@ -430,8 +430,8 @@ if (document.readyState === 'loading') {
     <colgroup><col class="col-issue"/><col class="col-criticality"/><col class="col-storypoint"/></colgroup>
     <thead><tr><th>Issue Category</th><th>Criticality</th><th>Story Point</th></tr></thead>
     <tbody>
-    <tr class="issue-row" data-criticality="optional" onclick="toggleRow('row-security-0', this)" style="cursor:pointer;">
-      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-security-0">&#x276F;</button> CWE-259: Use of Hard-coded Password</div></td>
+    <tr class="issue-row" data-criticality="optional">
+      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-security-0" aria-expanded="false" aria-controls="row-security-0" onclick="toggleRow('row-security-0', this)">&#x276F;</button> CWE-259: Use of Hard-coded Password</div></td>
       <td class="crit-cell"><span class="crit-label"><span class="crit-square crit-square-optional"></span>Optional</span></td>
       <td class="sp-cell">5</td>
     </tr>
@@ -450,8 +450,8 @@ if (document.readyState === 'loading') {
         </div>
       </td>
     </tr>
-    <tr class="issue-row" data-criticality="optional" onclick="toggleRow('row-security-1', this)" style="cursor:pointer;">
-      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-security-1">&#x276F;</button> CWE-798: Use of Hard-coded Credentials</div></td>
+    <tr class="issue-row" data-criticality="optional">
+      <td style="white-space:normal;"><div class="issue-title-cell"><button class="expand-btn" id="btn-row-security-1" aria-expanded="false" aria-controls="row-security-1" onclick="toggleRow('row-security-1', this)">&#x276F;</button> CWE-798: Use of Hard-coded Credentials</div></td>
       <td class="crit-cell"><span class="crit-label"><span class="crit-square crit-square-optional"></span>Optional</span></td>
       <td class="sp-cell">5</td>
     </tr>
@@ -483,7 +483,7 @@ function toggleRow(rowId, triggerRow) {
   if (!detail) return;
   var visible = detail.style.display !== 'none';
   detail.style.display = visible ? 'none' : 'table-row';
-  if (btn) btn.classList.toggle('open', !visible);
+  if (btn) { btn.classList.toggle('open', !visible); btn.setAttribute('aria-expanded', String(!visible)); }
 }
 (function() {
   var nav = document.querySelector('.tab-nav');
